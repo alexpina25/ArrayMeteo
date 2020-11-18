@@ -36,9 +36,20 @@ public class ArrayMeteo {
         if (diaInicio > 5 && numDiasMes == 31 || diaInicio > 6 && (numDiasMes == 30 || numDiasMes == 29)) {
             numFilas++; // Si el mes comienza al final de la semana aún se necesita otra fila
         }
-        System.out.println(" Media");
+        System.out.println("");
         ////////////////////////////////////////////////////////////////////////
         int contador = 1; // Primer día del mes a imprimir
 
+        for (int i = 0; i < diaInicio - 1; i++) {
+            System.out.print("   ");
+        }
+        
+        while (contador != numDiasMes) {
+            System.out.printf("%2d ", contador);
+            if ((contador + diaInicio -1) % 7 == 0) {
+                System.out.println("");
+            }
+            contador++;
+        }
     }
 }
