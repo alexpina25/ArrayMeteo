@@ -8,6 +8,7 @@ import java.util.Locale;
 
 /**
  * @author Alejandro Pina
+ * @version 1.0
  */
 public class ArrayMeteo {
 
